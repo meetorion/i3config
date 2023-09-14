@@ -1,4 +1,4 @@
-################# Start of all the settings
+q################# Start of all the settings
 
 # KEY DEFINITIONS TO REMEMBER
 # $mod = Set below
@@ -18,7 +18,6 @@
 # Key to rule them all : Super(Windows) or Alt key - see definition above
 # set Super key
 set $mod Mod4
-# set $mod Mod1
 
 ################# Define the movements keys - variables
 
@@ -147,7 +146,7 @@ bindsym $mod+F11 exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.s
 
 # start rofi small
 # bindsym $mod+d exec --no-startup-id rofi -show drun -font "Noto Sans 13"
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh 
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh 
 # bindsym $mod+F12 exec --no-startup-id rofi -show drun -font "Noto Sans 13"
 
 ################# how to exit, logoff, suspend, ...
@@ -354,7 +353,7 @@ for_window [class="Spotify"] move to workspace 10
 
 for_window [class="wemeetapp"] floating enable
 # for_window [class="Wine"] floating enable, border normal
-# for_window [class="wechat.exe"] floating enable, border normal
+for_window [class="wechat.exe"] floating enable, border normal
 # for_window [class="wechat.exe"] floating enable
 ################# autostart - execute applications at boot time
 
@@ -373,6 +372,7 @@ exec_always --no-startup-id autotiling
 
 # Browser
 # exec --no-startup-id vivaldi-stable
+for_window [class="Vivaldi-stable"] focus
 
 # Text-editor
 # exec --no-startup-id geany
@@ -466,12 +466,12 @@ bindsym $mod+KP_Enter exec --no-startup-id alacritty;focus
 bindsym control+mod1+t exec --no-startup-id alacritty; focus
 bindsym control+mod1+Return exec --no-startup-id alacritty; focus
 bindsym control+mod1+KP_Enter exec --no-startup-id alacritty; focus
-# bindsym mod1+Return exec --no-startup-id xfce4-terminal --drop-down; focus
+bindsym $mod+l exec --no-startup-id xfce4-terminal --drop-down; focus
 
 # System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 
-# settingse
+# settings
 bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
 
 # catfish
@@ -586,8 +586,7 @@ for_window [class="System-config-printer.py"] floating enable
 for_window [class="Unetbootin.elf"] floating enable
 for_window [class="Usb-creator-gtk"] floating enable
 for_window [class="^Vlc$"] floating disable
-# for_window [class="Wine"] floating disable
-for_window [class="Wine"] floating enable
+for_window [class="Wine"] floating disable
 for_window [class="Xfburn"] floating disable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Xfce4-settings-manager"] floating disable
